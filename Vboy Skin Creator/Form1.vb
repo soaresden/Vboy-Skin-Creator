@@ -130,9 +130,12 @@ Public Class Form1
         'kill zippath
         ZipFile.CreateFromDirectory(startPath, zipPath)
 
-        ' del the file tempfolder and file 1
+        ' Cleaning temp directory and del the file "1"
         System.IO.Directory.Delete(tempdir, True)
         Kill(thebitmapfile)
+
+        'Open folder
+        Process.Start(My.Computer.FileSystem.SpecialDirectories.Desktop)
     End Sub
     Public Shared Function StringToByteArray(ByVal hex As String) As Byte()
         Return Enumerable.Range(0, hex.Length).Where(Function(x) x Mod 2 = 0).[Select](Function(x) Convert.ToByte(hex.Substring(x, 2), 16)).ToArray()

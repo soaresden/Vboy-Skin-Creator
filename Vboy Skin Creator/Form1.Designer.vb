@@ -132,9 +132,9 @@ Partial Class Form1
         '
         'custompath
         '
-        Me.custompath.Location = New System.Drawing.Point(279, 249)
+        Me.custompath.Location = New System.Drawing.Point(279, 259)
         Me.custompath.Name = "custompath"
-        Me.custompath.Size = New System.Drawing.Size(179, 20)
+        Me.custompath.Size = New System.Drawing.Size(190, 20)
         Me.custompath.TabIndex = 17
         Me.custompath.Visible = False
         '
@@ -190,12 +190,12 @@ Partial Class Form1
         '
         'ThemeCustom
         '
-        Me.ThemeCustom.BackColor = System.Drawing.Color.Black
+        Me.ThemeCustom.BackColor = System.Drawing.Color.Lime
         Me.ThemeCustom.Image = CType(resources.GetObject("ThemeCustom.Image"), System.Drawing.Image)
         Me.ThemeCustom.Location = New System.Drawing.Point(279, 32)
         Me.ThemeCustom.Name = "ThemeCustom"
-        Me.ThemeCustom.Size = New System.Drawing.Size(179, 211)
-        Me.ThemeCustom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ThemeCustom.Size = New System.Drawing.Size(190, 221)
+        Me.ThemeCustom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.ThemeCustom.TabIndex = 10
         Me.ThemeCustom.TabStop = False
         '
