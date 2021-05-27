@@ -30,9 +30,10 @@ Partial Class Form1
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.ThemeBlank = New System.Windows.Forms.PictureBox()
         Me.HowTo = New System.Windows.Forms.GroupBox()
+        Me.custompath = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.themename = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ThemeCustom = New System.Windows.Forms.PictureBox()
@@ -40,6 +41,7 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.hexdata = New System.Windows.Forms.RichTextBox()
         Me.Information.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -111,9 +113,10 @@ Partial Class Form1
         'HowTo
         '
         Me.HowTo.BackColor = System.Drawing.Color.LightGreen
+        Me.HowTo.Controls.Add(Me.custompath)
         Me.HowTo.Controls.Add(Me.Label5)
         Me.HowTo.Controls.Add(Me.Button1)
-        Me.HowTo.Controls.Add(Me.TextBox1)
+        Me.HowTo.Controls.Add(Me.themename)
         Me.HowTo.Controls.Add(Me.Label4)
         Me.HowTo.Controls.Add(Me.Label2)
         Me.HowTo.Controls.Add(Me.ThemeCustom)
@@ -126,6 +129,14 @@ Partial Class Form1
         Me.HowTo.TabIndex = 9
         Me.HowTo.TabStop = False
         Me.HowTo.Text = "How To ? :"
+        '
+        'custompath
+        '
+        Me.custompath.Location = New System.Drawing.Point(279, 249)
+        Me.custompath.Name = "custompath"
+        Me.custompath.Size = New System.Drawing.Size(179, 20)
+        Me.custompath.TabIndex = 17
+        Me.custompath.Visible = False
         '
         'Label5
         '
@@ -152,12 +163,12 @@ Partial Class Form1
         Me.Button1.Text = "EXPORT THEME"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'themename
         '
-        Me.TextBox1.Location = New System.Drawing.Point(497, 41)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(180, 20)
-        Me.TextBox1.TabIndex = 13
+        Me.themename.Location = New System.Drawing.Point(497, 41)
+        Me.themename.Name = "themename"
+        Me.themename.Size = New System.Drawing.Size(180, 20)
+        Me.themename.TabIndex = 13
         '
         'Label4
         '
@@ -180,9 +191,11 @@ Partial Class Form1
         'ThemeCustom
         '
         Me.ThemeCustom.BackColor = System.Drawing.Color.Black
+        Me.ThemeCustom.Image = CType(resources.GetObject("ThemeCustom.Image"), System.Drawing.Image)
         Me.ThemeCustom.Location = New System.Drawing.Point(279, 32)
         Me.ThemeCustom.Name = "ThemeCustom"
         Me.ThemeCustom.Size = New System.Drawing.Size(179, 211)
+        Me.ThemeCustom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.ThemeCustom.TabIndex = 10
         Me.ThemeCustom.TabStop = False
         '
@@ -223,12 +236,21 @@ Partial Class Form1
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Soaresden's Github"
         '
+        'hexdata
+        '
+        Me.hexdata.Location = New System.Drawing.Point(427, 19)
+        Me.hexdata.Name = "hexdata"
+        Me.hexdata.Size = New System.Drawing.Size(463, 96)
+        Me.hexdata.TabIndex = 12
+        Me.hexdata.Text = ""
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightYellow
         Me.ClientSize = New System.Drawing.Size(895, 513)
+        Me.Controls.Add(Me.hexdata)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.HowTo)
@@ -262,7 +284,7 @@ Partial Class Form1
     Friend WithEvents HowTo As GroupBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents themename As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents ThemeCustom As PictureBox
@@ -270,4 +292,6 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents custompath As TextBox
+    Friend WithEvents hexdata As RichTextBox
 End Class
