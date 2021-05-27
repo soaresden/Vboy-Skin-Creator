@@ -43,6 +43,7 @@ Partial Class Converter
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.hexdata = New System.Windows.Forms.RichTextBox()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Information.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -98,15 +99,15 @@ Partial Class Converter
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.RichTextBox1.Location = New System.Drawing.Point(16, 212)
+        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.RichTextBox1.Location = New System.Drawing.Point(569, 212)
         Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(1175, 37)
+        Me.RichTextBox1.Size = New System.Drawing.Size(619, 58)
         Me.RichTextBox1.TabIndex = 8
-        Me.RichTextBox1.Text = "This Tool was made to easily customize your overly in Vboy emulator.. for S60 v1 " &
-    "and S60v2 (S60v3 didn't have Skin feature)"
+        Me.RichTextBox1.Text = "This tool was made to easily customize your overlay in Vboy emulator." & Global.Microsoft.VisualBasic.ChrW(10) & "For S60 v1 " &
+    "and S60v2 ONLY" & Global.Microsoft.VisualBasic.ChrW(10) & "(S60v3 didn't have Skin feature)"
         '
         'ThemeBlank
         '
@@ -278,12 +279,25 @@ Partial Class Converter
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "Vampent Vboy's .sis Archive :" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "https://archive.org/download/SymbianS60Emulators"
         '
+        'RichTextBox2
+        '
+        Me.RichTextBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.RichTextBox2.Location = New System.Drawing.Point(12, 183)
+        Me.RichTextBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.ReadOnly = True
+        Me.RichTextBox2.Size = New System.Drawing.Size(548, 87)
+        Me.RichTextBox2.TabIndex = 15
+        Me.RichTextBox2.Text = "Vboy v1.3:" & Global.Microsoft.VisualBasic.ChrW(10) & "262K = for 6680 ..." & Global.Microsoft.VisualBasic.ChrW(10) & "65K   = for N70 ..." & Global.Microsoft.VisualBasic.ChrW(10) & "4k      = for 3650, 3620, 3660" &
+    ", 3600, 7650, NGage, QD, 6600, 7610..."
+        '
         'Converter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightYellow
         Me.ClientSize = New System.Drawing.Size(1191, 620)
+        Me.Controls.Add(Me.RichTextBox2)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.hexdata)
         Me.Controls.Add(Me.LinkLabel1)
@@ -331,4 +345,5 @@ Partial Class Converter
     Friend WithEvents custompath As TextBox
     Friend WithEvents hexdata As RichTextBox
     Friend WithEvents LinkLabel2 As LinkLabel
+    Friend WithEvents RichTextBox2 As RichTextBox
 End Class
