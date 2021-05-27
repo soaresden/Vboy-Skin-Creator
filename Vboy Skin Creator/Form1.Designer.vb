@@ -23,42 +23,42 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Information = New System.Windows.Forms.GroupBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ThemeBlank = New System.Windows.Forms.PictureBox()
+        Me.HowTo = New System.Windows.Forms.GroupBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.ThemeCustom = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.GroupBox1.SuspendLayout()
+        Me.Information.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ThemeBlank, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.HowTo.SuspendLayout()
+        CType(Me.ThemeCustom, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'GroupBox1
+        'Information
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.GroupBox1.Controls.Add(Me.PictureBox2)
-        Me.GroupBox1.Location = New System.Drawing.Point(698, 200)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(193, 280)
-        Me.GroupBox1.TabIndex = 5
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Information :"
+        Me.Information.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Information.Controls.Add(Me.PictureBox2)
+        Me.Information.Location = New System.Drawing.Point(701, 226)
+        Me.Information.Name = "Information"
+        Me.Information.Size = New System.Drawing.Size(193, 280)
+        Me.Information.TabIndex = 5
+        Me.Information.TabStop = False
+        Me.Information.Text = "Information :"
         '
         'PictureBox2
         '
@@ -84,47 +84,48 @@ Partial Class Form1
         Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
         Me.PictureBox7.Location = New System.Drawing.Point(427, 12)
         Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(464, 150)
+        Me.PictureBox7.Size = New System.Drawing.Size(464, 154)
         Me.PictureBox7.TabIndex = 7
         Me.PictureBox7.TabStop = False
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(9, 149)
+        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.RichTextBox1.Location = New System.Drawing.Point(12, 172)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(412, 45)
+        Me.RichTextBox1.Size = New System.Drawing.Size(882, 31)
         Me.RichTextBox1.TabIndex = 8
-        Me.RichTextBox1.Text = "This Tool was made to easily customize your overly in Vboy emulator" & Global.Microsoft.VisualBasic.ChrW(10) & "for S60 v1 an" &
-    "d S60v2 (S60v3 didn't have Skin feature)"
+        Me.RichTextBox1.Text = "This Tool was made to easily customize your overly in Vboy emulator.. for S60 v1 " &
+    "and S60v2 (S60v3 didn't have Skin feature)"
         '
-        'PictureBox3
+        'ThemeBlank
         '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(34, 32)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(179, 211)
-        Me.PictureBox3.TabIndex = 7
-        Me.PictureBox3.TabStop = False
+        Me.ThemeBlank.Image = CType(resources.GetObject("ThemeBlank.Image"), System.Drawing.Image)
+        Me.ThemeBlank.Location = New System.Drawing.Point(34, 32)
+        Me.ThemeBlank.Name = "ThemeBlank"
+        Me.ThemeBlank.Size = New System.Drawing.Size(179, 211)
+        Me.ThemeBlank.TabIndex = 7
+        Me.ThemeBlank.TabStop = False
         '
-        'GroupBox2
+        'HowTo
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.LightGreen
-        Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.PictureBox4)
-        Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.PictureBox3)
-        Me.GroupBox2.Location = New System.Drawing.Point(9, 200)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(683, 280)
-        Me.GroupBox2.TabIndex = 9
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "How To ? :"
+        Me.HowTo.BackColor = System.Drawing.Color.LightGreen
+        Me.HowTo.Controls.Add(Me.Label5)
+        Me.HowTo.Controls.Add(Me.Button1)
+        Me.HowTo.Controls.Add(Me.TextBox1)
+        Me.HowTo.Controls.Add(Me.Label4)
+        Me.HowTo.Controls.Add(Me.Label2)
+        Me.HowTo.Controls.Add(Me.ThemeCustom)
+        Me.HowTo.Controls.Add(Me.Label1)
+        Me.HowTo.Controls.Add(Me.Label3)
+        Me.HowTo.Controls.Add(Me.ThemeBlank)
+        Me.HowTo.Location = New System.Drawing.Point(9, 226)
+        Me.HowTo.Name = "HowTo"
+        Me.HowTo.Size = New System.Drawing.Size(683, 280)
+        Me.HowTo.TabIndex = 9
+        Me.HowTo.TabStop = False
+        Me.HowTo.Text = "How To ? :"
         '
         'Label5
         '
@@ -176,14 +177,14 @@ Partial Class Form1
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "3°) Drag and Drop your Image below"
         '
-        'PictureBox4
+        'ThemeCustom
         '
-        Me.PictureBox4.BackColor = System.Drawing.Color.LightYellow
-        Me.PictureBox4.Location = New System.Drawing.Point(279, 32)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(179, 211)
-        Me.PictureBox4.TabIndex = 10
-        Me.PictureBox4.TabStop = False
+        Me.ThemeCustom.BackColor = System.Drawing.Color.Black
+        Me.ThemeCustom.Location = New System.Drawing.Point(279, 32)
+        Me.ThemeCustom.Name = "ThemeCustom"
+        Me.ThemeCustom.Size = New System.Drawing.Size(179, 211)
+        Me.ThemeCustom.TabIndex = 10
+        Me.ThemeCustom.TabStop = False
         '
         'Label1
         '
@@ -226,42 +227,45 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(1009, 592)
+        Me.BackColor = System.Drawing.Color.LightYellow
+        Me.ClientSize = New System.Drawing.Size(895, 513)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.HowTo)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.PictureBox6)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Information)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(911, 552)
+        Me.MinimumSize = New System.Drawing.Size(911, 552)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        Me.GroupBox1.ResumeLayout(False)
+        Me.Information.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ThemeBlank, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.HowTo.ResumeLayout(False)
+        Me.HowTo.PerformLayout()
+        CType(Me.ThemeCustom, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Information As GroupBox
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents ThemeBlank As PictureBox
+    Friend WithEvents HowTo As GroupBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents ThemeCustom As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label6 As Label

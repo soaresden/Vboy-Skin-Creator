@@ -118,6 +118,13 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="Resources\BLANK.BMPP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blank.BMP" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
