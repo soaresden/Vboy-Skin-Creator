@@ -42,6 +42,7 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.hexdata = New System.Windows.Forms.RichTextBox()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.Information.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -156,11 +157,11 @@ Partial Class Form1
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(528, 165)
+        Me.Button1.Location = New System.Drawing.Point(532, 178)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(114, 48)
+        Me.Button1.Size = New System.Drawing.Size(114, 65)
         Me.Button1.TabIndex = 14
-        Me.Button1.Text = "EXPORT THEME"
+        Me.Button1.Text = "EXPORT THEME AS" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "VBOY THEME " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(.VBY)"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'themename
@@ -195,6 +196,7 @@ Partial Class Form1
         Me.ThemeCustom.Location = New System.Drawing.Point(279, 32)
         Me.ThemeCustom.Name = "ThemeCustom"
         Me.ThemeCustom.Size = New System.Drawing.Size(190, 221)
+        Me.ThemeCustom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.ThemeCustom.TabIndex = 10
         Me.ThemeCustom.TabStop = False
         '
@@ -219,16 +221,16 @@ Partial Class Form1
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(6, 118)
+        Me.Label6.Location = New System.Drawing.Point(334, 118)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(87, 13)
+        Me.Label6.Size = New System.Drawing.Size(96, 13)
         Me.Label6.TabIndex = 10
-        Me.Label6.Text = "v1 by Soaresden"
+        Me.Label6.Text = "v1.1 by Soaresden"
         '
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(322, 118)
+        Me.LinkLabel1.Location = New System.Drawing.Point(322, 131)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(99, 13)
         Me.LinkLabel1.TabIndex = 11
@@ -237,19 +239,30 @@ Partial Class Form1
         '
         'hexdata
         '
-        Me.hexdata.Location = New System.Drawing.Point(427, 95)
+        Me.hexdata.Location = New System.Drawing.Point(427, 94)
         Me.hexdata.Name = "hexdata"
-        Me.hexdata.Size = New System.Drawing.Size(463, 71)
+        Me.hexdata.Size = New System.Drawing.Size(464, 72)
         Me.hexdata.TabIndex = 12
         Me.hexdata.Text = ""
         Me.hexdata.Visible = False
+        '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.Location = New System.Drawing.Point(9, 118)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(257, 26)
+        Me.LinkLabel2.TabIndex = 13
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "Vampent Vboy's .sis Archive :" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "https://archive.org/download/SymbianS60Emulators"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightYellow
-        Me.ClientSize = New System.Drawing.Size(895, 513)
+        Me.ClientSize = New System.Drawing.Size(895, 512)
+        Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.hexdata)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label6)
@@ -259,8 +272,8 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.Information)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(911, 552)
-        Me.MinimumSize = New System.Drawing.Size(911, 552)
+        Me.MaximumSize = New System.Drawing.Size(911, 551)
+        Me.MinimumSize = New System.Drawing.Size(911, 551)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.Information.ResumeLayout(False)
@@ -294,4 +307,5 @@ Partial Class Form1
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents custompath As TextBox
     Friend WithEvents hexdata As RichTextBox
+    Friend WithEvents LinkLabel2 As LinkLabel
 End Class
