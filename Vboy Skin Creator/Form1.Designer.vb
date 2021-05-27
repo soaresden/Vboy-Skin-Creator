@@ -238,11 +238,12 @@ Partial Class Form1
         '
         'hexdata
         '
-        Me.hexdata.Location = New System.Drawing.Point(427, 19)
+        Me.hexdata.Location = New System.Drawing.Point(427, 95)
         Me.hexdata.Name = "hexdata"
-        Me.hexdata.Size = New System.Drawing.Size(463, 96)
+        Me.hexdata.Size = New System.Drawing.Size(463, 71)
         Me.hexdata.TabIndex = 12
         Me.hexdata.Text = ""
+        Me.hexdata.Visible = False
         '
         'Form1
         '

@@ -132,7 +132,7 @@ Public Class Form1
 
         ' del the file tempfolder and file 1
         System.IO.Directory.Delete(tempdir, True)
-        Kill thebitmapfile
+        Kill(thebitmapfile)
     End Sub
     Public Shared Function StringToByteArray(ByVal hex As String) As Byte()
         Return Enumerable.Range(0, hex.Length).Where(Function(x) x Mod 2 = 0).[Select](Function(x) Convert.ToByte(hex.Substring(x, 2), 16)).ToArray()
