@@ -2,5 +2,6 @@
 
 https://github.com/soaresden/Vboy-Skin-Creator/releases
 
-![image](https://user-images.githubusercontent.com/54243866/119829785-e9972e80-befb-11eb-9757-5c757b4c3ed2.png)
+![image](https://user-images.githubusercontent.com/54243866/119842629-2157a380-bf07-11eb-9813-970ef1d2dc94.png)
+
 
