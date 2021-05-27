@@ -37,7 +37,13 @@ Public Class Form1
         End Using
         hexdata.Text = hexstring
     End Sub
-
+    Private Sub picCategoryImage_DragEnter(sender As System.Object, e As System.Windows.Forms.DragEventArgs) Handles ThemeCustom.DragEnter
+        If e.Data.GetDataPresent(DataFormats.FileDrop) Then
+            e.Effect = DragDropEffects.Copy
+        Else
+            e.Effect = DragDropEffects.None
+        End If
+    End Sub
 
     Private Sub picCategoryImage_DragDrop(sender As System.Object, e As System.Windows.Forms.DragEventArgs) Handles ThemeCustom.DragDrop
         Dim picbox As PictureBox = CType(sender, PictureBox)
@@ -54,9 +60,14 @@ Public Class Form1
                 Exit Sub
             Else
                 custompath.Text = path
+
+                Dim g As Graphics = picbox.CreateGraphics()
+                g.DrawImage(CType(GetImageFile(custompath.Text), Image), New Point(0, 0))
             End If
         Next
+
         picbox.Image = GetImageFile(custompath.Text)
+        ThemeCustom.SizeMode = PictureBoxSizeMode.CenterImage
     End Sub
     Public Function GetImageFile(ByVal fn As String) As Image
         If IO.File.Exists(fn) Then
@@ -73,13 +84,7 @@ Public Class Form1
         End If
     End Function
 
-    Private Sub picCategoryImage_DragEnter(sender As System.Object, e As System.Windows.Forms.DragEventArgs) Handles ThemeCustom.DragEnter
-        If e.Data.GetDataPresent(DataFormats.FileDrop) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
-    End Sub
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If themename.Text = "" Then
@@ -100,26 +105,27 @@ Public Class Form1
         'Testing file length and do 
         If filelength < 329640 Then
             Do Until filelength = 329640
-                RichTextBox1.Text.Append("00")
-                filelength = hexdata.Text.Length
+                hexdata.Text = hexdata.Text + "00-"
+                filelength = filelength + 3
             Loop
         ElseIf filelength > 329640 Then
             MsgBox("Bad size file")
             Exit Sub
         End If
 
-        'Test the beginning and 
+        'Test the beginning
         Dim goodbeginning = "42 4D 38 AD 01 00 00 00 00 00 36 00 00 00 28 00 00 00 B0 00 00 00 D0 00 00 00 01 00 18 00 00 00 00 00 02 AD 01 00 12 0B 00 00 12 0B 00 00 00 00 00 00 00 00 00 00"
 
         If beginning <> goodbeginning Then
-            RichTextBox1.Text.Replace(beginning, Replace(goodbeginning, " ", "-"))
+            hexdata.Text.Replace(beginning, Replace(goodbeginning, " ", "-"))
         End If
 
         'Export as "1" BMP File
         Dim newbytes = Replace(hexdata.Text, "-", "")
         MkDir(My.Computer.FileSystem.SpecialDirectories.Desktop & "\VBOYCONVERTER\")
+
         Dim tempdir = My.Computer.FileSystem.SpecialDirectories.Desktop & "\VBOYCONVERTER"
-        Dim thebitmapfile = tempdir & "\1"
+        Dim thebitmapfile = tempdir & "\1.bmp"
         Dim thezipfile = My.Computer.FileSystem.SpecialDirectories.Desktop & "\" & themename.Text & ".vby"
 
         My.Computer.FileSystem.WriteAllBytes(thebitmapfile, StringToByteArray(newbytes), False)
@@ -132,9 +138,8 @@ Public Class Form1
 
         ' Cleaning temp directory and del the file "1"
         System.IO.Directory.Delete(tempdir, True)
-        Kill(thebitmapfile)
-
         'Open folder
+        MsgBox("Conversion Done !")
         Process.Start(My.Computer.FileSystem.SpecialDirectories.Desktop)
     End Sub
     Public Shared Function StringToByteArray(ByVal hex As String) As Byte()

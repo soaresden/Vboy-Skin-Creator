@@ -195,7 +195,6 @@ Partial Class Form1
         Me.ThemeCustom.Location = New System.Drawing.Point(279, 32)
         Me.ThemeCustom.Name = "ThemeCustom"
         Me.ThemeCustom.Size = New System.Drawing.Size(190, 221)
-        Me.ThemeCustom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.ThemeCustom.TabIndex = 10
         Me.ThemeCustom.TabStop = False
         '
