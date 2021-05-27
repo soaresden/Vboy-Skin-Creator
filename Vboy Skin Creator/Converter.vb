@@ -5,7 +5,7 @@ Imports System.IO.Compression
 
 
 
-Public Class Form1
+Public Class Converter
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ThemeCustom.AllowDrop = True
@@ -147,4 +147,8 @@ Public Class Form1
     Public Shared Function StringToByteArray(ByVal hex As String) As Byte()
         Return Enumerable.Range(0, hex.Length).Where(Function(x) x Mod 2 = 0).[Select](Function(x) Convert.ToByte(hex.Substring(x, 2), 16)).ToArray()
     End Function
+
+    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+        Process.Start("https://archive.org/download/SymbianS60Emulators")
+    End Sub
 End Class

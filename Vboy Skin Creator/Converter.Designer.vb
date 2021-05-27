@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class Converter
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
@@ -22,7 +22,7 @@ Partial Class Form1
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Converter))
         Me.Information = New System.Windows.Forms.GroupBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
@@ -56,9 +56,11 @@ Partial Class Form1
         '
         Me.Information.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Information.Controls.Add(Me.PictureBox2)
-        Me.Information.Location = New System.Drawing.Point(701, 226)
+        Me.Information.Location = New System.Drawing.Point(935, 278)
+        Me.Information.Margin = New System.Windows.Forms.Padding(4)
         Me.Information.Name = "Information"
-        Me.Information.Size = New System.Drawing.Size(193, 280)
+        Me.Information.Padding = New System.Windows.Forms.Padding(4)
+        Me.Information.Size = New System.Drawing.Size(257, 345)
         Me.Information.TabIndex = 5
         Me.Information.TabStop = False
         Me.Information.Text = "Information :"
@@ -66,18 +68,20 @@ Partial Class Form1
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(10, 16)
+        Me.PictureBox2.Location = New System.Drawing.Point(13, 20)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(179, 211)
+        Me.PictureBox2.Size = New System.Drawing.Size(239, 260)
         Me.PictureBox2.TabIndex = 6
         Me.PictureBox2.TabStop = False
         '
         'PictureBox6
         '
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(9, 12)
+        Me.PictureBox6.Location = New System.Drawing.Point(12, 15)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(412, 103)
+        Me.PictureBox6.Size = New System.Drawing.Size(549, 127)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox6.TabIndex = 6
         Me.PictureBox6.TabStop = False
@@ -85,19 +89,21 @@ Partial Class Form1
         'PictureBox7
         '
         Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
-        Me.PictureBox7.Location = New System.Drawing.Point(427, 12)
+        Me.PictureBox7.Location = New System.Drawing.Point(569, 15)
+        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(464, 154)
+        Me.PictureBox7.Size = New System.Drawing.Size(619, 190)
         Me.PictureBox7.TabIndex = 7
         Me.PictureBox7.TabStop = False
         '
         'RichTextBox1
         '
         Me.RichTextBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.RichTextBox1.Location = New System.Drawing.Point(12, 172)
+        Me.RichTextBox1.Location = New System.Drawing.Point(16, 212)
+        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(882, 31)
+        Me.RichTextBox1.Size = New System.Drawing.Size(1175, 37)
         Me.RichTextBox1.TabIndex = 8
         Me.RichTextBox1.Text = "This Tool was made to easily customize your overly in Vboy emulator.. for S60 v1 " &
     "and S60v2 (S60v3 didn't have Skin feature)"
@@ -105,9 +111,10 @@ Partial Class Form1
         'ThemeBlank
         '
         Me.ThemeBlank.Image = CType(resources.GetObject("ThemeBlank.Image"), System.Drawing.Image)
-        Me.ThemeBlank.Location = New System.Drawing.Point(34, 32)
+        Me.ThemeBlank.Location = New System.Drawing.Point(45, 39)
+        Me.ThemeBlank.Margin = New System.Windows.Forms.Padding(4)
         Me.ThemeBlank.Name = "ThemeBlank"
-        Me.ThemeBlank.Size = New System.Drawing.Size(179, 211)
+        Me.ThemeBlank.Size = New System.Drawing.Size(239, 260)
         Me.ThemeBlank.TabIndex = 7
         Me.ThemeBlank.TabStop = False
         '
@@ -124,27 +131,31 @@ Partial Class Form1
         Me.HowTo.Controls.Add(Me.Label1)
         Me.HowTo.Controls.Add(Me.Label3)
         Me.HowTo.Controls.Add(Me.ThemeBlank)
-        Me.HowTo.Location = New System.Drawing.Point(9, 226)
+        Me.HowTo.Location = New System.Drawing.Point(12, 278)
+        Me.HowTo.Margin = New System.Windows.Forms.Padding(4)
         Me.HowTo.Name = "HowTo"
-        Me.HowTo.Size = New System.Drawing.Size(683, 280)
+        Me.HowTo.Padding = New System.Windows.Forms.Padding(4)
+        Me.HowTo.Size = New System.Drawing.Size(911, 345)
         Me.HowTo.TabIndex = 9
         Me.HowTo.TabStop = False
         Me.HowTo.Text = "How To ? :"
         '
         'custompath
         '
-        Me.custompath.Location = New System.Drawing.Point(279, 259)
+        Me.custompath.Location = New System.Drawing.Point(372, 319)
+        Me.custompath.Margin = New System.Windows.Forms.Padding(4)
         Me.custompath.Name = "custompath"
-        Me.custompath.Size = New System.Drawing.Size(190, 20)
+        Me.custompath.Size = New System.Drawing.Size(252, 22)
         Me.custompath.TabIndex = 17
         Me.custompath.Visible = False
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(494, 126)
+        Me.Label5.Location = New System.Drawing.Point(659, 155)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(95, 13)
+        Me.Label5.Size = New System.Drawing.Size(127, 17)
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "5°) Export it in .vby"
         '
@@ -157,35 +168,39 @@ Partial Class Form1
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(532, 178)
+        Me.Button1.Location = New System.Drawing.Point(709, 219)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(114, 65)
+        Me.Button1.Size = New System.Drawing.Size(152, 80)
         Me.Button1.TabIndex = 14
         Me.Button1.Text = "EXPORT THEME AS" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "VBOY THEME " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(.VBY)"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'themename
         '
-        Me.themename.Location = New System.Drawing.Point(497, 41)
+        Me.themename.Location = New System.Drawing.Point(663, 50)
+        Me.themename.Margin = New System.Windows.Forms.Padding(4)
         Me.themename.Name = "themename"
-        Me.themename.Size = New System.Drawing.Size(180, 20)
+        Me.themename.Size = New System.Drawing.Size(239, 22)
         Me.themename.TabIndex = 13
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(494, 16)
+        Me.Label4.Location = New System.Drawing.Point(659, 20)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(116, 13)
+        Me.Label4.Size = New System.Drawing.Size(156, 17)
         Me.Label4.TabIndex = 12
         Me.Label4.Text = "4°) Name your Theme :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(276, 16)
+        Me.Label2.Location = New System.Drawing.Point(368, 20)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(179, 13)
+        Me.Label2.Size = New System.Drawing.Size(239, 17)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "3°) Drag and Drop your Image below"
         '
@@ -193,9 +208,10 @@ Partial Class Form1
         '
         Me.ThemeCustom.BackColor = System.Drawing.Color.Lime
         Me.ThemeCustom.Image = CType(resources.GetObject("ThemeCustom.Image"), System.Drawing.Image)
-        Me.ThemeCustom.Location = New System.Drawing.Point(279, 32)
+        Me.ThemeCustom.Location = New System.Drawing.Point(372, 39)
+        Me.ThemeCustom.Margin = New System.Windows.Forms.Padding(4)
         Me.ThemeCustom.Name = "ThemeCustom"
-        Me.ThemeCustom.Size = New System.Drawing.Size(190, 221)
+        Me.ThemeCustom.Size = New System.Drawing.Size(253, 272)
         Me.ThemeCustom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.ThemeCustom.TabIndex = 10
         Me.ThemeCustom.TabStop = False
@@ -203,45 +219,50 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(7, 259)
+        Me.Label1.Location = New System.Drawing.Point(9, 319)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(206, 13)
+        Me.Label1.Size = New System.Drawing.Size(277, 17)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "2°) Edit it Manually via Photoshop or Other"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 16)
+        Me.Label3.Location = New System.Drawing.Point(8, 20)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(230, 13)
+        Me.Label3.Size = New System.Drawing.Size(303, 17)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "1°) Click the image below to save it on Desktop"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(325, 118)
+        Me.Label6.Location = New System.Drawing.Point(433, 145)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(96, 13)
+        Me.Label6.Size = New System.Drawing.Size(127, 17)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "v1.1 by Soaresden"
         '
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(322, 131)
+        Me.LinkLabel1.Location = New System.Drawing.Point(429, 161)
+        Me.LinkLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(99, 13)
+        Me.LinkLabel1.Size = New System.Drawing.Size(133, 17)
         Me.LinkLabel1.TabIndex = 11
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Soaresden's Github"
         '
         'hexdata
         '
-        Me.hexdata.Location = New System.Drawing.Point(427, 94)
+        Me.hexdata.Location = New System.Drawing.Point(569, 116)
+        Me.hexdata.Margin = New System.Windows.Forms.Padding(4)
         Me.hexdata.Name = "hexdata"
-        Me.hexdata.Size = New System.Drawing.Size(464, 72)
+        Me.hexdata.Size = New System.Drawing.Size(617, 88)
         Me.hexdata.TabIndex = 12
         Me.hexdata.Text = ""
         Me.hexdata.Visible = False
@@ -249,19 +270,20 @@ Partial Class Form1
         'LinkLabel2
         '
         Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Location = New System.Drawing.Point(9, 118)
+        Me.LinkLabel2.Location = New System.Drawing.Point(12, 145)
+        Me.LinkLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(257, 26)
+        Me.LinkLabel2.Size = New System.Drawing.Size(332, 34)
         Me.LinkLabel2.TabIndex = 13
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "Vampent Vboy's .sis Archive :" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "https://archive.org/download/SymbianS60Emulators"
         '
-        'Form1
+        'Converter
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightYellow
-        Me.ClientSize = New System.Drawing.Size(895, 512)
+        Me.ClientSize = New System.Drawing.Size(1191, 620)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.hexdata)
         Me.Controls.Add(Me.LinkLabel1)
@@ -271,11 +293,12 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.Information)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(911, 551)
-        Me.MinimumSize = New System.Drawing.Size(911, 551)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.MaximumSize = New System.Drawing.Size(1209, 667)
+        Me.MinimumSize = New System.Drawing.Size(1209, 667)
+        Me.Name = "Converter"
+        Me.Text = "Vampent Vboy Skin Creator by Soaresden v1.1"
         Me.Information.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
