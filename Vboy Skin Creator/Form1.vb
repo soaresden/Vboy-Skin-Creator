@@ -117,12 +117,14 @@ Public Class Form1
         Dim goodbeginning = "42 4D 38 AD 01 00 00 00 00 00 36 00 00 00 28 00 00 00 B0 00 00 00 D0 00 00 00 01 00 18 00 00 00 00 00 02 AD 01 00 12 0B 00 00 12 0B 00 00 00 00 00 00 00 00 00 00"
 
         If beginning <> goodbeginning Then
-            hexdata.Text.Replace(beginning, Replace(goodbeginning, " ", "-"))
+            hexdata.Text = Replace(Replace(Replace(hexdata.Text, "-", " "), beginning, Replace(goodbeginning, " ", "-")), " ", "-")
         End If
 
         'Export as "1" BMP File
         Dim newbytes = Replace(hexdata.Text, "-", "")
-        MkDir(My.Computer.FileSystem.SpecialDirectories.Desktop & "\VBOYCONVERTER\")
+        If Directory.Exists(My.Computer.FileSystem.SpecialDirectories.Desktop & "\VBOYCONVERTER\") = False Then
+            MkDir(My.Computer.FileSystem.SpecialDirectories.Desktop & "\VBOYCONVERTER\")
+        End If
 
         Dim tempdir = My.Computer.FileSystem.SpecialDirectories.Desktop & "\VBOYCONVERTER"
         Dim thebitmapfile = tempdir & "\1.bmp"
@@ -139,7 +141,7 @@ Public Class Form1
         ' Cleaning temp directory and del the file "1"
         System.IO.Directory.Delete(tempdir, True)
         'Open folder
-        MsgBox("Conversion Done !")
+        MsgBox("Conversion Done !" & Chr(10) & Chr(10) & "Don't forget to transfer it and move to :" & Chr(10) & "system\apps\vboy\skins")
         Process.Start(My.Computer.FileSystem.SpecialDirectories.Desktop)
     End Sub
     Public Shared Function StringToByteArray(ByVal hex As String) As Byte()
